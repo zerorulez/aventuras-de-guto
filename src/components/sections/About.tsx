@@ -26,9 +26,9 @@ function About() {
     },
   ]);
   return (
-    <section className="text-center px-5 py-10 gap-5 flex flex-col">
-      <p className="text-blue-light font-bold">SOBRE</p>
-      <h3 className="text-4xl text-orange-primary font-bold">
+    <section className="text-center px-5 py-10 gap-5 flex flex-col" id="sobre">
+      <p className="text-secondary font-bold">SOBRE</p>
+      <h3 className="text-4xl text-primary font-bold">
         Bem-vindo ao universo de Aventuras do Guto!
       </h3>
       <p>
@@ -39,8 +39,8 @@ function About() {
         fazer parte dessa incrível jornada.
       </p>
       <div className="flex flex-col gap-10 py-5">
-        {attributes.map((attribute) => (
-          <div className="flex flex-col items-center text-orange-primary">
+        {attributes.map((attribute, index) => (
+          <div className="flex flex-col items-center text-primary" key={index}>
             <div>{attribute.icon}</div>
             <p className="font-bold">{attribute.name}</p>
           </div>

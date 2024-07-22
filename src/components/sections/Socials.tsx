@@ -2,7 +2,10 @@ import { InstagramEmbed } from "react-social-media-embed";
 
 function Socials() {
   return (
-    <section className="bg-orange-primary px-5 py-10 flex flex-col text-center text-orange-light gap-5">
+    <section
+      id="social"
+      className="bg-primary px-5 py-10 flex flex-col text-center text-primary-foreground gap-5"
+    >
       <p className="font-bold">REDES SOCIAIS</p>
       <p>Siga o Guto no Instagram!</p>
       <div style={{ display: "flex", justifyContent: "center" }}>
