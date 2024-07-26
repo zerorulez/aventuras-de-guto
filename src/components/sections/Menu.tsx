@@ -19,6 +19,7 @@ function Menu() {
             onClick={() => {
               goTo(item.href);
             }}
+            className="cursor-pointer hover:underline"
           >
             {item.name}
           </li>
