@@ -5,7 +5,14 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import Navbar from "./components/sections/Navbar";
 import Menu from "./components/sections/Menu";
-import { createContext, Dispatch, SetStateAction, useState } from "react";
+import {
+  createContext,
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
+import { inherits } from "util";
 
 interface Menu {
   menuIsOpen: boolean;
@@ -17,8 +24,14 @@ export const MenuContext = createContext<Menu>({} as Menu);
 function App() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
+  useEffect(() => {
+    document.querySelector("#html").style.overflow = menuIsOpen
+      ? "hidden"
+      : "inherit";
+  }, [menuIsOpen]);
+
   return (
-    <main className="bg-primary-foreground static">
+    <main className="bg-primary-foreground relative">
       <MenuContext.Provider value={{ menuIsOpen, setMenuIsOpen }}>
         <Navbar />
         {menuIsOpen && <Menu />}

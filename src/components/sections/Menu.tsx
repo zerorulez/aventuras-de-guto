@@ -11,7 +11,7 @@ function Menu() {
   };
 
   return (
-    <div className="fixed bg-[#000] bg-opacity-80 h-screen w-full text-primary-foreground flex justify-between items-start p-5">
+    <div className="fixed bg-[#808080] bg-opacity-90 h-screen w-full text-primary-foreground flex justify-between items-start p-5">
       <menu className="flex flex-col gap-4 font-bold text-xl">
         {menuItems.map((item, index) => (
           <li

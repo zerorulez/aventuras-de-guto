@@ -10,6 +10,7 @@ module.exports = {
   prefix: "",
   theme: {
     colors: {
+      transparent: "transparent",
       orange: {
         primary: "#FF7F26",
         light: "#FFF7E9",
