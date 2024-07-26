@@ -12,7 +12,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { inherits } from "util";
 
 interface Menu {
   menuIsOpen: boolean;
@@ -25,9 +24,11 @@ function App() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   useEffect(() => {
-    document.querySelector("#html").style.overflow = menuIsOpen
-      ? "hidden"
-      : "inherit";
+    const html = document.querySelector("html");
+
+    if (html) {
+      html.style.overflow = menuIsOpen ? "hidden" : "inherit";
+    }
   }, [menuIsOpen]);
 
   return (
