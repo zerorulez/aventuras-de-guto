@@ -46,19 +46,18 @@ function About() {
           fazer parte dessa incrível jornada.
         </p>
       </ShowOnScroll>
-      <ShowOnScroll horizontal>
-        <div className="flex flex-col gap-10 py-5 justify-center lg:flex-row">
-          {attributes.map((attribute, index) => (
-            <div
-              className="flex flex-col items-center text-primary"
-              key={index}
-            >
+      {/* <ShowOnScroll horizontal> */}
+      <div className="flex flex-col gap-10 py-5 justify-center lg:flex-row">
+        {attributes.map((attribute, index) => (
+          <ShowOnScroll horizontal delay={index * 0.2} key={index}>
+            <div className="flex flex-col items-center text-primary">
               <div>{attribute.icon}</div>
               <p className="font-bold">{attribute.name}</p>
             </div>
-          ))}
-        </div>{" "}
-      </ShowOnScroll>
+          </ShowOnScroll>
+        ))}
+      </div>
+      {/* </ShowOnScroll> */}
     </section>
   );
 }
