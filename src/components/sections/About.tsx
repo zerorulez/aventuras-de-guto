@@ -15,7 +15,7 @@ function About() {
     },
     {
       icon: <YoutubeIcon size="50" />,
-      name: "+460K INSCRITOS",
+      name: "+480K INSCRITOS",
     },
     {
       icon: <ParaglidingIcon size="50" />,
